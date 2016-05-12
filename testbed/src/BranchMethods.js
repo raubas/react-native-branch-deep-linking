@@ -17,6 +17,14 @@ class BranchMethods extends Component {
     results: [],
   }
 
+  componentWillMount() {
+    branch.subscribe(({params, uri, error}) => {
+      console.log('inbound link', params, uri, error)
+      if (error) this.addResult('error', 'subscribe', error)
+      else this.addResult('success', 'subscribe', params || uri)
+    })
+  }
+
   createBranchUniversalObject = async () => {
     try {
       let result = await branch.createBranchUniversalObject('abc', defaultBUO)
@@ -169,7 +177,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   resultsContainer: {
-    height: 200,
+    flex: 2,
   },
   scrollContainer: {
     padding: 5,

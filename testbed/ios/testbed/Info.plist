@@ -21,8 +21,14 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string></string>
+			<string>rnbranch</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>rnbranch</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
@@ -51,6 +57,6 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>branch_key</key>
-	<string>key_live_feebgAAhbH9Tv85H5wLQhpdaefiZv5Dv</string>
+	<string>key_live_igm7TtVeZUGM9oqEVZbEgcacArllsJch</string>
 </dict>
 </plist>
